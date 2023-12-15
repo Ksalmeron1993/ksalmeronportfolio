@@ -83,9 +83,9 @@ const ImageSlider = ({slides}) => {
     console.log('Slides:', slides);
     console.log('Current Slide:', slides[currentIndex]);
     
-    const gitlabLink = slides && slides.length > 0 && currentIndex >= 0 && currentIndex < slides.length
-    ? slides[currentIndex].gitlabLink
-    : null;
+    //const gitlabLink = slides && slides.length > 0 && currentIndex >= 0 && currentIndex < slides.length
+    //? slides[currentIndex].gitlabLink
+    //: null;
       
 
 
