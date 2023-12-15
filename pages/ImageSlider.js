@@ -2,15 +2,6 @@ import { useState } from "react";
 import { FaGitlab } from 'react-icons/fa';
 
 
-
-//for projects portion
-const slides= [
-  {url: '/movie.png', title: "MovieMania", gitlabLink: 'https://gitlab.com/instructors2085807/movie-maniacs.git'},
-  {url: '/carcar.png', title:"CarCar", gitlabLink: 'https://gitlab.com/ksalmeron1993/car-car.git' },
-  {url: 'morecoming.png', title:"Default", gitlabLink: null},
-];
-
-
 const ImageSlider = ({slides}) => {
     console.log('Slides: ', slides);
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -88,9 +79,8 @@ const ImageSlider = ({slides}) => {
 
     };
     
-    const gitlabLink = slides && slides.length > 0 && currentIndex >= 0 && currentIndex < slides.length
-    ? slides[currentIndex].gitlabLink
-    : null;
+    const gitlabLink = slides[currentIndex]?.gitlabLink || 'defaultGitlabLink';
+
       
 
 
