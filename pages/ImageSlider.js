@@ -1,6 +1,15 @@
-import { useState } from "react";
+import React, { useState } from 'react';
 import { FaGitlab } from 'react-icons/fa';
 
+
+
+function getSafe(fn, defaultVal) {
+  try {
+    return fn();
+  } catch (e) {
+    return defaultVal;
+  }
+}
 
 const ImageSlider = ({slides}) => {
     console.log('Slides: ', slides);
@@ -21,7 +30,7 @@ const ImageSlider = ({slides}) => {
       borderRadius: '10px', 
       backgroundPosition: 'center',
       backgroundSize: 'cover',
-      backgroundImage: `url(${slides[currentIndex]?.url})`,
+      backgroundImage: `url(${getSafe(() => slides[currentIndex]?.url, '')})`,
       margin: '0 auto',
       display: 'flex',
       justifyContent: 'center',
@@ -77,12 +86,10 @@ const ImageSlider = ({slides}) => {
     console.log('Current Index:', currentIndex);
     console.log('Slides:', slides);
     console.log('Current Slide:', slides[currentIndex]);
-    
-    const gitlabLink = slides[currentIndex]?.gitlabLink !== undefined && slides[currentIndex]?.gitlabLink !== null
-  ? slides[currentIndex].gitlabLink
-  : 'defaultGitlabLink';
+   
+    const gitlabLink = getSafe(() => slides[currentIndex]?.gitlabLink, 'defaultGitlabLink');
 
-console.log('Final Gitlab Link:', gitlabLink);
+    console.log('Final Gitlab Link:', gitlabLink);
 
 
     console.log('Final Gitlab Link:', gitlabLink);
