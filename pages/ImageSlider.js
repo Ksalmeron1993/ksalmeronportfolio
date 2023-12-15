@@ -10,6 +10,12 @@ function getSafe(fn, defaultVal) {
   }
 }
 
+const slides= [
+  {url: '/movie.png', title: "MovieMania", gitlabLink: 'https://gitlab.com/instructors2085807/movie-maniacs.git'},
+  {url: '/carcar.png', title:"CarCar", gitlabLink: 'https://gitlab.com/ksalmeron1993/car-car.git' },
+  {url: 'morecoming.png', title:"Default", gitlabLink: null},
+];
+
 const ImageSlider = ({slides}) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     
