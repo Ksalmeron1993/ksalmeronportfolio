@@ -14,18 +14,21 @@ const ImageSlider = ({slides}) => {
         padding: '2px' 
     };
     
-    const slideStyles ={
-        width: '100%',
-        height: '100%', 
-        borderRadius: '10px', 
-        backgroundPosition: 'center',
-        backgroundSize: 'cover',
-        backgroundImage: `url(${slides[currentIndex].url})`,
-        margin: '0 auto',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-    };
+    const slideStyles = slides?.[currentIndex]
+  ? {
+      width: '100%',
+      height: '100%', 
+      borderRadius: '10px', 
+      backgroundPosition: 'center',
+      backgroundSize: 'cover',
+      backgroundImage: `url(${slides[currentIndex]?.url})`,
+      margin: '0 auto',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+    }
+  : {};
+
 
     const arrowStyles = {
         position: 'absolute',
@@ -46,14 +49,6 @@ const ImageSlider = ({slides}) => {
         ...arrowStyles,
         right: '0',
         transform: 'translate(120%, -50%)',
-      };
-
-    const dotsContainerStyles = {
-        display: 'flex',
-        bottom: '20px',
-        width: '100%',
-        display: 'flex',
-        justifyContent: 'center',
       };
 
     const dotStyles = {
@@ -113,11 +108,13 @@ console.log('Final Gitlab Link:', gitlabLink);
             </a>
           )}
         </div>
-        <div style={dotsContainerStyles}>
-          {slides && slides.length > 0 && slides.map((slide, slideIndex) => (
-            <div key={slideIndex} style={dotStyles} onClick={() => goToSlide(slideIndex)}> ◉ </div>
-          ))}
+        {slides && slides.length > 0 && slides.map((slide, slideIndex) => (
+        <div key={slideIndex} style={dotStyles} onClick={() => goToSlide(slideIndex)}>
+          ◉ 
+          {slide.someProperty}
         </div>
+        ))}
+
       </div>
     );
           };
