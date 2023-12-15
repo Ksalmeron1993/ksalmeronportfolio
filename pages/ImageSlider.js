@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { FaGitlab } from 'react-icons/fa';
 
 
-
 function getSafe(fn, defaultVal) {
   try {
     return fn();
@@ -22,8 +21,7 @@ const ImageSlider = ({slides}) => {
         padding: '2px' 
     };
     
-    const slideStyles = slides?.[currentIndex]
-  ? {
+    const slideStyles = slides?.[currentIndex]? {
       width: '100%',
       height: '100%', 
       borderRadius: '10px', 
@@ -35,8 +33,7 @@ const ImageSlider = ({slides}) => {
       justifyContent: 'center',
       alignItems: 'center',
     }
-  : {};
-
+    : {};
 
     const arrowStyles = {
         position: 'absolute',
@@ -58,65 +55,63 @@ const ImageSlider = ({slides}) => {
         right: '0',
         transform: 'translate(120%, -50%)',
       };
-
-    const dotStyles = {
+      
+      const dotStyles = {
         margin: '0 9px',
         cursor: 'pointer',
         fontSize: '20px',
-    }
-
-    const goToPrevious = () => {
+      }
+      
+      const goToPrevious = () => {
         const isFirstSlide = currentIndex === 0
         const newIndex = isFirstSlide ? slides.length -1 : currentIndex -1;
         setCurrentIndex(newIndex);
-    };
-
-    const goToNext = () => {
+      };
+      
+      const goToNext = () => {
         const isLastSlide = currentIndex === slides.length -1 
         const newIndex = isLastSlide ? 0 : currentIndex + 1;
         setCurrentIndex(newIndex);
-    };
-
-    const goToSlide = (slideIndex) => {
+      };
+      
+      const goToSlide = (slideIndex) => {
         setCurrentIndex(slideIndex); 
-
-    };
-    
-    console.log('Current Index:', currentIndex);
-    console.log('Slides:', slides);
-    console.log('Current Slide:', slides[currentIndex]);
-   
-    const gitlabLink = getSafe(() => slides[currentIndex]?.gitlabLink, 'defaultGitlabLink');
-
-    console.log('Final Gitlab Link:', gitlabLink);
-
-    return (
+      };
+      
+      console.log('Current Index:', currentIndex);
+      console.log('Slides:', slides);
+      console.log('Current Slide:', slides[currentIndex]);
+      
+      const gitlabLink = getSafe(() => slides[currentIndex]?.gitlabLink, 'defaultGitlabLink');
+      console.log('Final Gitlab Link:', gitlabLink);
+      
+      return (
       <div style={sliderStyles}>
         <div style={leftArrowStyles} onClick={goToPrevious}> ⇦ </div>
         <div style={rightArrowStyles} onClick={goToNext}> ⇨ </div>
         <div style={slideStyles}>
           {gitlabLink && (
-            <a
-              href={gitlabLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ position: 'absolute', bottom: '520px', left: '50%', transform: 'translateX(-50%)' }}
-            >
-              <div className="neon-outline">
+          <a
+          href={gitlabLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ position: 'absolute', bottom: '520px', left: '50%', transform: 'translateX(-50%)' }}
+          >
+            <div className="neon-outline">
               {FaGitlab && <FaGitlab size={40} color="#fff" />}
               </div>
-            </a>
-          )}
-        </div>
-        {slides && slides.length > 0 && slides.map((slide, slideIndex) => (
-        <div key={slideIndex} style={dotStyles} onClick={() => goToSlide(slideIndex)}>
-          ◉ 
-          {slide.someProperty}
-        </div>
-        ))}
+              </a>
+              )}
+              </div>
+              {slides && slides.length > 0 && slides.map((slide, slideIndex) => (
+              <div key={slideIndex} style={dotStyles} onClick={() => goToSlide(slideIndex)}>
+                ◉ 
+                {slide.someProperty}
+                </div>
+                ))}
+                </div>
+                );
+              };
 
-      </div>
-    );
-          };
-
+               
 export default ImageSlider;
