@@ -87,8 +87,6 @@ console.log('Final Gitlab Link:', gitlabLink);
 
     console.log('Final Gitlab Link:', gitlabLink);
 
-      
-
 
     return (
       <div style={sliderStyles}>
@@ -103,7 +101,7 @@ console.log('Final Gitlab Link:', gitlabLink);
               style={{ position: 'absolute', bottom: '520px', left: '50%', transform: 'translateX(-50%)' }}
             >
               <div className="neon-outline">
-                <FaGitlab size={40} color="#fff" />
+              {FaGitlab && <FaGitlab size={40} color="#fff" />}
               </div>
             </a>
           )}
