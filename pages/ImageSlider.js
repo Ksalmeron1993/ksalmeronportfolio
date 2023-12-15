@@ -79,7 +79,15 @@ const ImageSlider = ({slides}) => {
 
     };
     
-    const gitlabLink = slides && slides[currentIndex] ? slides[currentIndex].gitlabLink : null;
+    console.log('Current Index:', currentIndex);
+    console.log('Slides:', slides);
+    console.log('Current Slide:', slides[currentIndex]);
+    
+    const gitlabLink = slides && slides.length > 0 && currentIndex >= 0 && currentIndex < slides.length
+    ? slides[currentIndex].gitlabLink
+    : null;
+      
+
 
     return (
       <div style={sliderStyles}>
