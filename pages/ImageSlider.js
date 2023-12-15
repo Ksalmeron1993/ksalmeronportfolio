@@ -78,8 +78,8 @@ const ImageSlider = ({slides}) => {
         setCurrentIndex(slideIndex); 
 
     };
-
-const gitlabLink = slides[currentIndex]?.gitlabLink;
+    
+    const gitlabLink = slides && slides[currentIndex] ? slides[currentIndex].gitlabLink : null;
 
     return (
       <div style={sliderStyles}>
