@@ -79,7 +79,18 @@ const ImageSlider = ({slides}) => {
 
     };
     
-    const gitlabLink = slides[currentIndex]?.gitlabLink || 'defaultGitlabLink';
+    console.log('Current Index:', currentIndex);
+    console.log('Slides:', slides);
+    console.log('Current Slide:', slides[currentIndex]);
+    
+    const gitlabLink = slides[currentIndex]?.gitlabLink !== undefined && slides[currentIndex]?.gitlabLink !== null
+  ? slides[currentIndex].gitlabLink
+  : 'defaultGitlabLink';
+
+console.log('Final Gitlab Link:', gitlabLink);
+
+
+    console.log('Final Gitlab Link:', gitlabLink);
 
       
 
