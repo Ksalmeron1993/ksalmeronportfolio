@@ -10,13 +10,11 @@ function getSafe(fn, defaultVal) {
   }
 }
 
-const slides= [
-  {url: '/movie.png', title: "MovieMania", gitlabLink: 'https://gitlab.com/instructors2085807/movie-maniacs.git'},
-  {url: '/carcar.png', title:"CarCar", gitlabLink: 'https://gitlab.com/ksalmeron1993/car-car.git' },
-  {url: 'morecoming.png', title:"Default", gitlabLink: null},
-];
 
 const ImageSlider = ({slides}) => {
+  if (!slides) {
+    console.error('Slides is undefined or null');
+  }
     const [currentIndex, setCurrentIndex] = useState(0);
     
     const sliderStyles = {
@@ -24,12 +22,12 @@ const ImageSlider = ({slides}) => {
         position: 'relative',
         maxWidth: '500px', 
         margin: '0 auto',
-        padding: '2px' 
+        //padding: '2px' 
     };
     
     const slideStyles = slides?.[currentIndex]? {
       width: '100%',
-      height: '100%', 
+      //height: '100%', 
       borderRadius: '10px', 
       backgroundPosition: 'center',
       backgroundSize: 'cover',
@@ -62,12 +60,20 @@ const ImageSlider = ({slides}) => {
         transform: 'translate(120%, -50%)',
       };
       
+      const dotsContainerStyles = {
+        display: 'flex',
+        bottom: '20px',
+        width: '100%',
+        display: 'flex',
+        justifyContent: 'center',
+      };
+
       const dotStyles = {
         margin: '0 9px',
         cursor: 'pointer',
         fontSize: '20px',
       }
-      
+
       const goToPrevious = () => {
         const isFirstSlide = currentIndex === 0
         const newIndex = isFirstSlide ? slides.length -1 : currentIndex -1;
@@ -84,13 +90,8 @@ const ImageSlider = ({slides}) => {
         setCurrentIndex(slideIndex); 
       };
       
-      console.log('Current Index:', currentIndex);
-      console.log('Slides:', slides);
-      console.log('Current Slide:', slides[currentIndex]);
-      
       const gitlabLink = getSafe(() => slides[currentIndex]?.gitlabLink, 'defaultGitlabLink');
-      console.log('Final Gitlab Link:', gitlabLink);
-      
+
       return (
       <div style={sliderStyles}>
         <div style={leftArrowStyles} onClick={goToPrevious}> ⇦ </div>
@@ -109,12 +110,12 @@ const ImageSlider = ({slides}) => {
               </a>
               )}
               </div>
+              <div style={dotsContainerStyles}>
               {slides && slides.length > 0 && slides.map((slide, slideIndex) => (
               <div key={slideIndex} style={dotStyles} onClick={() => goToSlide(slideIndex)}>
-                ◉ 
-                {slide.someProperty}
-                </div>
+                ◉ </div>
                 ))}
+                </div>
                 </div>
                 );
               };

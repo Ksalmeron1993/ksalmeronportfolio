@@ -168,7 +168,7 @@ function reveal() {
       <div id="projects" name="projects" className="text-5xl flex justify-center py-9 text-white-600 container reveal fade-right" >
       <p className="alfa-slab-one" style={{ fontSize: '90px' }}>Projects</p>      
       </div>
-        <div style={{marginTop: '50px'}}className="text-center">
+        <div style={{containerStyles, marginTop: '50px'}}className="text-center">
         <ImageSlider slides={slides} />
         </div>
       </div>
