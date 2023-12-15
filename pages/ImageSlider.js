@@ -12,7 +12,6 @@ function getSafe(fn, defaultVal) {
 }
 
 const ImageSlider = ({slides}) => {
-    console.log('Slides: ', slides);
     const [currentIndex, setCurrentIndex] = useState(0);
     
     const sliderStyles = {
@@ -90,10 +89,6 @@ const ImageSlider = ({slides}) => {
     const gitlabLink = getSafe(() => slides[currentIndex]?.gitlabLink, 'defaultGitlabLink');
 
     console.log('Final Gitlab Link:', gitlabLink);
-
-
-    console.log('Final Gitlab Link:', gitlabLink);
-
 
     return (
       <div style={sliderStyles}>
