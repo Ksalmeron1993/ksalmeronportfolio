@@ -2,6 +2,15 @@ import { useState } from "react";
 import { FaGitlab } from 'react-icons/fa';
 
 
+
+//for projects portion
+const slides= [
+  {url: '/movie.png', title: "MovieMania", gitlabLink: 'https://gitlab.com/instructors2085807/movie-maniacs.git'},
+  {url: '/carcar.png', title:"CarCar", gitlabLink: 'https://gitlab.com/ksalmeron1993/car-car.git' },
+  {url: 'morecoming.png', title:"Default", gitlabLink: null},
+];
+
+
 const ImageSlider = ({slides}) => {
     console.log('Slides: ', slides);
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -23,13 +32,13 @@ const ImageSlider = ({slides}) => {
         backgroundImage: `url(${slides[currentIndex].url})`,
         margin: '0 auto',
         display: 'flex',
-        justifyContent: 'center', // Horizontal centering
-        alignItems: 'center', //vertical centering
+        justifyContent: 'center',
+        alignItems: 'center',
     };
 
     const arrowStyles = {
         position: 'absolute',
-        top: '50%', // vertical position
+        top: '50%',
         fontSize: '25px',
         color: '#fff',
         zIndex: 1,
@@ -79,13 +88,9 @@ const ImageSlider = ({slides}) => {
 
     };
     
-    console.log('Current Index:', currentIndex);
-    console.log('Slides:', slides);
-    console.log('Current Slide:', slides[currentIndex]);
-    
-    //const gitlabLink = slides && slides.length > 0 && currentIndex >= 0 && currentIndex < slides.length
-    //? slides[currentIndex].gitlabLink
-    //: null;
+    const gitlabLink = slides && slides.length > 0 && currentIndex >= 0 && currentIndex < slides.length
+    ? slides[currentIndex].gitlabLink
+    : null;
       
 
 
