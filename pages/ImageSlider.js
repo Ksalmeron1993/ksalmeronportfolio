@@ -22,12 +22,12 @@ const ImageSlider = ({slides}) => {
         position: 'relative',
         maxWidth: '500px', 
         margin: '0 auto',
-        //padding: '2px' 
+        padding: '2px' 
     };
     
     const slideStyles = slides?.[currentIndex]? {
       width: '100%',
-      //height: '100%', 
+      height: '100%', 
       borderRadius: '10px', 
       backgroundPosition: 'center',
       backgroundSize: 'cover',
