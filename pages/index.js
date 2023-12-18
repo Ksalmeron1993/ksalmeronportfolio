@@ -107,7 +107,8 @@ function reveal() {
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <main className="bg-white text-black px-10 md:px-20 lg:px-40 dark:bg-gray-900">
+      
+      <main className="bg-black text-white px-10 md:px-20 lg:px-40 dark:bg-gray-900">
         <div>
           <Navbar />
         </div>
@@ -154,7 +155,7 @@ function reveal() {
       </div>
     </main>
 
-    <section className='flex flex-col items-center mt-5'>
+    <section className='flex flex-col items-center mt-5 bg-black text-white'>
       <div style={{marginTop: '20px'}}>
         <Skills />
       </div>
@@ -163,22 +164,20 @@ function reveal() {
       </div>
     </section>
 
-    <section style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-start', height: '80vh', marginTop:'30px', marginBottom:'-100px' }}>
-      <div className="container reveal fade-right">
+    <section className='flex flex-col items-center mt-5 bg-black text-white' style={{width: '100%', margin: 0}}>
       <div id="projects" name="projects" className="text-5xl flex justify-center py-9 text-white-600 container reveal fade-right" >
       <p className="alfa-slab-one" style={{ fontSize: '90px' }}>Projects</p>      
       </div>
-        <div style={{containerStyles, marginTop: '50px'}}className="text-center">
+        <div style={{containerStyles, width: '100%', marginTop: '50px', marginBottom: '100px'}}className="text-center">
         <ImageSlider slides={slides} />
-        </div>
       </div>
     </section>
     <div>
-      <div style={{ marginTop: "20vh" }} />
+      <div style={{ marginTop: "0vh"}} />
       <ScrollToTop smooth />
       </div>
     </div>
-    <div className="container" id="contact" name="contact" style={{display:'flex'}}>
+    <div style={{ marginTop: '300px'}}className="container" id="contact" name="contact">
       <Footer /> 
     </div>
    </div>

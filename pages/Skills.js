@@ -13,10 +13,11 @@ function SkillsSubheader() {
   return (
     <ListSubheader
       component="div"
-      sx={{ fontSize: '50px', fontWeight: 'bold', color: 'white' }}
       id="skills"
       name="skills"
-      className="text-5xl flex justify-center py-9 text-white-600 container reveal fade-right"
+      className="text-5xl flex justify-center py-9 container reveal fade-right"
+      style={{ color: 'white', background
+      : 'black', fontSize: '90px' }}
     >
       <p className="alfa-slab-one" style={{ fontSize: '90px' }}>Skills</p>
     </ListSubheader>
@@ -63,7 +64,7 @@ function Skills() {
 
   return (
     <div style={{ display: 'flex', margin: '350px', marginLeft: '100px', marginTop: '300px', marginBottom: '450px' }}>
-      <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper', marginRight: '20px' }} component="nav">
+      <List sx={{ width: '100%', maxWidth: 360,  marginRight: '20px' }} component="nav">
         <SkillsSubheader />
         <div style={{ display: 'flex', flexDirection: 'row' }}>
             <div style={{ flex: 1 }} >

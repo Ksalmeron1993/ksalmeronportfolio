@@ -6,7 +6,7 @@ import { AiFillLinkedin } from 'react-icons/ai';
 
 function Footer() {
   return (
-  <footer className="bg-white text-black px-10 md:px-20 lg:px-40 dark:bg-gray-900">
+  <footer className="bg-black text-white dark:bg-gray-900" style={{padding: 0}}>
     <div className='container flex flex-col md:flex-row justify-center items-center'>
         <div className='flex justify-center md:mb-0'>
             <Image
@@ -41,7 +41,7 @@ function Footer() {
                 </div>
             </div>
             </div>
-            <div className='absolute bottom-0 right-14 mb-16 mr-16'>
+            <div className='absolute bottom-0 right-14 mb-16 mr-16 linkedin'>
                 <AiFillLinkedin size={50} color='white' />
             </div>
         </div>
