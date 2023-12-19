@@ -99,7 +99,7 @@ function reveal() {
   }, []); // The blur dependency array ensures the effect runs only once
 
   return (
-    <div className="page-container">
+    <div className="page-container bg-black text-white">
       <div className='page-container'>
       <Head>
         <title>Kevin Salmeron</title>
