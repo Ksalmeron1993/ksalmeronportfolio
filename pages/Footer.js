@@ -26,7 +26,9 @@ function Footer() {
         </div>
       </div>
       <div className="md:ml-4 mt-4 md:mt-0">
+      <a href="https://www.linkedin.com/in/kevin-salmeron-zendejas" target="_blank" rel="noopener noreferrer">
         <AiFillLinkedin size={50} color='white' />
+    </a>
       </div>
       <div className="md:ml-60 mt-70 md:mt-50">
         <Image src={logomain} alt="logokevin" width={180} height={180} className='md:w-60 md:h-60 md:mx-50' />

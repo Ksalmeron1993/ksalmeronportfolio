@@ -11,7 +11,7 @@ function AboutMe(){
         <div className="md:w-1/2 text-left container reveal fade-bottom">
             <h2 style={{ fontWeight: 'bold', color: 'white'}} id="about" name="about" className="text-xl py-2 font-medium md:text-5xl"> 
             Full Stack
-            <br/> Web Developer.
+            <br/> Software Developer.
             </h2>
             <div>
                 <p className="text-md py-5 leading-8 text-white-800 md:text-2xl max-w-xl mx-auto container reveal fade-left">
