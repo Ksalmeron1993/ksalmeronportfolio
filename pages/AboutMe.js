@@ -16,10 +16,10 @@ function AboutMe(){
             <div>
                 <p className="text-md py-5 leading-8 text-white-800 md:text-2xl max-w-xl mx-auto container reveal fade-left">
                     Welcome to my personal website.
-                    I am a creative Software Developer on the lookout for an opportunity
-                    to embark on my first role in the industry. With a strong foundation in coding 
-                    and a relentless drive to innovate, I am excited to contribute my skills to a dynamic team. 
-                    Explore my portfolio to get a glimpse of how I am ready to make a meaningful impact in the world of software development.            
+                    I am a dedicated Software Developer eagerly seeking opportunities to contribute my skills and expertise to impactful 
+                    projects within the industry. With a solid foundation in coding and a strong drive to innovate, I currently serve as an intern at RadicalX, 
+                    where I specialize in building dynamic web applications using React, Node.js, and CSS.
+                    Explore my portfolio to see how I am prepared to make a meaningful impact in the world of software development.            
                 </p>
             </div>
             <div className="text-5xl flex justify-center gap-16 py-3 text-white-600 container reveal fade-right">

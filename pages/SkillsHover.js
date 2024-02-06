@@ -33,7 +33,7 @@ function SkillsHover(){
         </div>
         <h3 className="text-xl font-large pt-8 pb-6">Problem Solving</h3>
         <p style={{fontSize:'20px'}}>Faced with challenges, I approach each problem systematically, breaking it down into manageable components. 
-          My experience with languages like Python and JavaScript, coupled with a foundational understangin of algorithms and data structures, 
+          With my experience with languages like Python and JavaScript, coupled with a foundational understanding of algorithms and data structures, 
           I am well prepared to analyze complex problems and devise elegant solutions.
         </p>
       </div>

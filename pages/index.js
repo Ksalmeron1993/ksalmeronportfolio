@@ -19,6 +19,7 @@ import woods2 from '../public/woods2.png';
 export default function Home() {
   //open is our initial state, used to set the value of currentState for first render
   //setOpen is the state setter used to update the value of currentState
+  //useState is an object with four properties: frontEnd, backEnd, programmingLanguages, and systemDesignTools, all initialized to false.
   const [open, setOpen] = useState({
     frontEnd: false,
     backEnd: false,
@@ -27,7 +28,6 @@ export default function Home() {
   });
 
 
-//function to toggle the open state for a specific skill
 const toggleSkillOpen = (skill) => {
   setOpen((prevOpen) => 
   ({
