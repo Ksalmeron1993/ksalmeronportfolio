@@ -86,18 +86,6 @@ a {
 }
 
 
-/*skills click down options hover */
-.skills-class:hover {
-  background-color: 	rgb(76, 46, 10);
-  transition: background-color .1s; /* 1 second transition duration */
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 /*floating logo */
 .image-container {
   animation-name: rotate-horizontal; /* Name of the animation */
@@ -246,4 +234,3 @@ footer {
   background-color: black;
   color: white;
 }
-
