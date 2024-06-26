@@ -8,7 +8,7 @@ import problemsolve from '../public/problemsolve.png';
 function SkillsHover(){
     return (
 <div>
-    <div className="lg:flex gap-9"> 
+    <div className="lg:flex gap-5"> 
       <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white your-section-class container reveal fade-right">
         <div className="flex justify-center items-center mb-8">
             <Image src={code} width={100} height={100} alt="code" />
@@ -23,8 +23,8 @@ function SkillsHover(){
             <Image src={design} width={100} height={100} alt="design" />
         </div>
         <h3 className="text-xl font-large pt-8 pb-6">Creative Designs</h3>
-        <p style={{fontSize:'20px'}}>Leveraging tools like React and CSS, I can craft visually appealing interfaces that enhance user interaction. 
-         With an art background, my commitment is to create not just functional but aesthetically pleasing and user-friendly applications.
+        <p style={{fontSize:'20px'}}>Leveraging tools like React, HTML, and CSS, I can craft visually appealing interfaces that enhance user interaction. 
+            My commitment is to create not just functional but aesthetically pleasing and user friendly applications.
         </p>
       </div>
       <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white your-section-class container reveal fade-right">
@@ -32,8 +32,7 @@ function SkillsHover(){
             <Image src={problemsolve} width={100} height={100} alt="problemsolving" />
         </div>
         <h3 className="text-xl font-large pt-8 pb-6">Problem Solving</h3>
-        <p style={{fontSize:'20px'}}>Faced with challenges, I approach each problem systematically, breaking it down into manageable components. 
-          With my experience with languages like Python and JavaScript, coupled with a foundational understanding of algorithms and data structures, 
+        <p style={{fontSize:'20px'}}>Faced with challenges, I approach each problem systematically, breaking it down into manageable components.  
           I am well prepared to analyze complex problems and devise elegant solutions.
         </p>
       </div>

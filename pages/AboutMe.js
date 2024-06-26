@@ -13,19 +13,17 @@ function AboutMe() {
           name="about"
           className="text-xl py-2 font-medium md:text-5xl"
         >
-          Full Stack
+          Front End
           <br /> Software Developer.
         </h2>
         <div>
           <p className="text-md py-5 leading-8 text-white-800 md:text-2xl max-w-xl mx-auto container reveal fade-left">
-            Welcome to my personal website! I am a passionate front end
-            developer dedicated to creating visually stunning and highly
-            functional user interfaces. With expertise in HTML, CSS, JavaScript,
-            and modern frameworks like React.js and Next.js, I thrive on
-            transforming complex designs into seamless, responsive web
-            experiences. I am driven by a love for innovation and a commitment
-            to delivering exceptional quality in every project.
-          </p>
+            Welcome to my personal website! I am a front end
+            developer dedicated to creating visually appealing and 
+            functional user interfaces. With experience in HTML, CSS, JavaScript,
+            and modern frameworks like React.js and Next.js, I push myself to continuously
+            improve my skills.
+            </p>
         </div>
         <div className="text-5xl flex justify-center gap-16 py-3 text-white-600 container reveal fade-right">
           <a

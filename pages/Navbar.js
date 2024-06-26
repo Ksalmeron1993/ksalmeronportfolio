@@ -1,50 +1,78 @@
 import React from "react";
 import logomain from "../public/logomain.png";
-import resume from "../public/resume.png";
 import Image from "next/image";
+import Link from "next/link";
 
 function Navbar() {
+  const handleLinkClick = (e, id) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    const offset = 80;
+    const bodyRect = document.body.getBoundingClientRect().top;
+    const elementRect = element.getBoundingClientRect().top;
+    const elementPosition = elementRect - bodyRect;
+    const offsetPosition = elementPosition - offset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <nav
-      className="py-10 mb-12 flex justify-between"
+      className="sticky-navbar py-10 mb-12 flex justify-between"
       style={{ fontSize: "20px" }}
     >
       <div className="image-container">
-        <Image src={logomain} alt="logokevin" width={180} height={180} />
+        <Image src={logomain} alt="logokevin" width={130} height={130} />
       </div>
-      <ul className=" flex items-center space-x-10">
+      <ul className=" flex items-center space-x-8">
         <li>
-          <a
-            id="resume-link"
-            href={resume.src}
+          <Link
+            href="/resume"
             className="bg-gradient-to-r from-green-400 to-green-600 text-white px-4 py-2 rounded-md ml-8"
-            target="_blank"
-            rel="noopener noreferrer"
           >
             Resume
-          </a>
+          </Link>
         </li>
         <ul
-          className="flex items-center space-x-14"
+          className="flex items-center space-x-8"
           style={{ fontSize: "20px" }}
         >
-          <li className="mr-6">
-            <a href="#about" className="link">
+          <li className="mr-4">
+            <a
+              href="#about"
+              className="link"
+              onClick={(e) => handleLinkClick(e, "about")}
+            >
               About Me
             </a>
           </li>
           <li className="mr-6">
-            <a href="#skills" className="link">
+            <a
+              href="#skills"
+              className="link"
+              onClick={(e) => handleLinkClick(e, "skills")}
+            >
               Skills
             </a>
           </li>
           <li className="mr-6">
-            <a href="#projects" className="link">
+            <a
+              href="#projects"
+              className="link"
+              onClick={(e) => handleLinkClick(e, "projects")}
+            >
               Projects
             </a>
           </li>
           <li className="mr-6">
-            <a href="#contact" className="link">
+            <a
+              href="#contact"
+              className="link"
+              onClick={(e) => handleLinkClick(e, "contact")}
+            >
               Contact
             </a>
           </li>

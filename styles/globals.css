@@ -11,25 +11,48 @@ body {
   background-color: black;
 }
 
-html, body {
+html,
+body {
   scroll-behavior: smooth;
 }
-
 
 a {
   color: inherit;
   text-decoration: none;
 }
 
+.sticky-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 10;
+  width: 100%;
+  z-index: 10; /* Ensures the navbar stays on top */
+  background-color: rgb(
+    37,
+    70,
+    116
+  );
+  box-shadow: 0 2px 4px rgba(121, 115, 115, 0.1);
+  height: 90px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+}
 
 /* navbar hover */
 .link:hover {
   color: greenyellow;
 }
 
-/*font type(s) */
+.content {
+  padding-top: 80px;
+}
+
 .alfa-slab-one {
-  font-family: 'Alfa Slab One', sans-serif;
+  font-family: "Alfa Slab One", sans-serif;
 }
 
 @font-face {
@@ -37,32 +60,40 @@ a {
   src: url("../public/Burtons.otf");
 }
 
-
-/* four image containers (use 25% for four, and 50% for two, etc) */
+/* four image containers */
 .column {
+  border-radius: 50%;
   float: left;
-  width: 24.5%;
+  width: 50%;
   padding: 0px;
   box-sizing: border-box;
 }
 
 .image1 {
-  width: 90%;
+  margin-right: 20px;
+  border-radius: 50%;
+  width: 100%;
   height: 400px;
 }
 
 .image2 {
-  width: 90%;
+  margin-right: 20px;
+  border-radius: 50%;
+  width: 100%;
   height: 400px;
 }
 
 .image3 {
-  width: 90%;
+  margin-right: 20px;
+  border-radius: 50%;
+  width: 100%;
   height: 400px;
 }
 
 .image4 {
-  width: 90%;
+  margin-right: 20px;
+  border-radius: 50%;
+  width: 100%;
   height: 400px;
 }
 
@@ -79,12 +110,16 @@ a {
   box-sizing: border-box;
 }
 
+
 /*skills boxes */
 .your-section-class:hover {
-  background-color: 	rgb(76, 46, 10);
-  transition: background-color 1s; /* 1 second transition duration */
+  padding: 10px;
+  margin: 5px;
+  border-radius: 15px;
+  height: 420px;
+  background-color: rgb(76, 46, 10);
+  transition: background-color 0.3s ease;
 }
-
 
 /*floating logo */
 .image-container {
@@ -104,9 +139,7 @@ a {
   }
 }
 
-
 /* styles.css */
-
 .slide-in-element {
   position: relative;
   left: -100%; /* Initial position, off the screen to the left */
@@ -115,7 +148,7 @@ a {
 
 @keyframes slide-in {
   to {
-      left: 0; /* Final position, on the screen */
+    left: 0; /* Final position, on the screen */
   }
 }
 
@@ -170,7 +203,6 @@ a {
   }
 }
 
-
 /*gitlab logo with green outline */
 .neon-outline {
   position: relative;
@@ -178,7 +210,7 @@ a {
 }
 
 .neon-outline::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -3px;
   left: -3px;
@@ -203,7 +235,6 @@ a {
   }
 }
 
-
 /* Apply flex layout to the skills container */
 .skills-container {
   display: flex;
@@ -212,20 +243,65 @@ a {
   align-items: center; /* Vertically center the components */
 }
 
+/*container for the resume page */
+.resume-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  padding-top: 50px;
+}
+#resume-link {
+  padding: 10px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 5px;
+}
+.resume {
+  position: relative;
+  height: auto;
+  border: 1px solid #ccc;
+}
+
+.resume-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin-top: 10px;
+}
+.button-container {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  gap: 50px;
+  margin-bottom: 20px;
+}
+.home-link {
+  background-color: #385bb2;
+  padding: 8px 16px;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-block;
+}
+
 /*footer email */
 .contact {
   text-decoration: underline;
 }
 
-.linkedin{
+.linkedin {
   position: relative;
   bottom: 0;
   right: -100px;
   left: 1000px;
   margin-bottom: -600px;
   margin-right: -6px;
-  margin-left: 280px;}
-
+  margin-left: 280px;
+}
 
 footer {
   width: 100%;

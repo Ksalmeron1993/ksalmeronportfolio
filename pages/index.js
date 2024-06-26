@@ -16,7 +16,6 @@ import woods2 from "../public/woods2.png";
 import Skills from "./Skills";
 
 export default function Home() {
- 
   const slides = [
     {
       url: "/movie.png",
@@ -62,7 +61,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="page-container bg-black text-white">
+    <div className="content page-container bg-black text-white">
       <div className="page-container">
         <Head>
           <title>Kevin Salmeron</title>
@@ -76,15 +75,17 @@ export default function Home() {
             <Navbar />
           </div>
 
-          <div className="text-center p-10 mb-10">
+          <div className="text-center p-10 mb-2">
             <div className="md:flex md:justify-between">
               <div className="w-full md:w-1/2 slide-in-element mt-2">
                 <h2
                   style={{
-                    fontWeight: 'bold',
-                    backgroundImage: 'linear-gradient(to right, #0074D9, #33ADFF)',
-                    WebkitBackgroundClip: 'text',
-                    color: 'white',
+                    fontWeight: "bold",
+                    backgroundImage:
+                      "linear-gradient(to right, #0074D9, #33ADFF)",
+                    WebkitBackgroundClip: "text",
+                    color: "white",
+                    fontSize: "6rem",
                   }}
                   className="text-4xl md:text-7xl py-2 font-medium"
                 >
@@ -93,7 +94,7 @@ export default function Home() {
               </div>
               <div className="w-full md:w-1/2 slide-in-element mt-2 pl-0 md:pl-8">
                 <h2
-                  style={{ fontWeight: 'bold', color: 'white' }}
+                  style={{ fontWeight: "bold", color: "white", fontSize: "2.5rem" }}
                   className="text-xl md:text-4xl py-2 font-medium"
                 >
                   by
@@ -103,52 +104,52 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex flex-wrap justify-center mb-10">
+          <div className="pictures flex flex-wrap justify-center mb-10">
             <div className="p-2">
-              <Link href={'../public/woods2.png'}>
+              <Link href={"../public/woods2.png"}>
                 <Image
                   src={woods2}
                   alt="woods"
                   className="image1"
                   id="image1"
-                  priority={true}
                   placeholder="blur"
+                  loading="lazy"
                 />
               </Link>
             </div>
             <div className="p-2">
-              <Link href={'../public/city.png'}>
+              <Link href={"../public/city.png"}>
                 <Image
                   src={city}
                   alt="city"
                   className="image2"
                   id="image2"
-                  priority={true}
                   placeholder="blur"
+                  loading="lazy"
                 />
               </Link>
             </div>
             <div className="p-2">
-              <Link href={'../public/museum2.png'}>
+              <Link href={"../public/museum2.png"}>
                 <Image
                   src={museum2}
                   alt="museum"
                   className="image3"
                   id="image3"
-                  priority={true}
                   placeholder="blur"
+                  loading="lazy"
                 />
               </Link>
             </div>
             <div className="p-2">
-              <Link href={'../public/needle2.png'}>
+              <Link href={"../public/needle2.png"}>
                 <Image
                   src={needle2}
                   alt="needle"
                   className="image4"
                   id="image4"
-                  priority={true}
                   placeholder="blur"
+                  loading="lazy"
                 />
               </Link>
             </div>
@@ -158,7 +159,11 @@ export default function Home() {
             <AboutMe />
           </div>
 
-          <section id="skills" name="skills" className="flex flex-col items-center mb-10 bg-black text-white">
+          <section
+            id="skills"
+            name="skills"
+            className="flex flex-col items-center mb-10 bg-black text-white"
+          >
             <div>
               <Skills />
             </div>
