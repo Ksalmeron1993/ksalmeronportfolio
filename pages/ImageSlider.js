@@ -144,7 +144,7 @@ const ImageSlider = ({ slides }) => {
       <div style={dotsContainerStyles}>
         {slides &&
           slides.length > 0 &&
-          slides.map((slide, slideIndex) => (
+          slides?.map((slide, slideIndex) => (
             <div
               key={slideIndex}
               style={dotStyles}
