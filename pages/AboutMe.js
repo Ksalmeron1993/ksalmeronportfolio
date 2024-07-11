@@ -22,7 +22,8 @@ function AboutMe() {
             developer dedicated to creating visually appealing and 
             functional user interfaces. With experience in HTML, CSS, JavaScript,
             and modern frameworks like React.js and Next.js, I push myself to continuously
-            improve my skills.
+            improve my skills. 
+            Please leave any feedback or reach out if you want to connect with me ! 
             </p>
         </div>
         <div className="text-5xl flex justify-center gap-16 py-3 text-white-600 container reveal fade-right">

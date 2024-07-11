@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { FaGitlab } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import Image from "next/image";
 
 function getSafe(fn, defaultVal) {
   try {
@@ -89,10 +90,13 @@ const ImageSlider = ({ slides }) => {
     setCurrentIndex(slideIndex);
   };
 
-  const gitlabLink = getSafe(
-    () => slides[currentIndex]?.gitlabLink,
-    "defaultGitlabLink"
+  const githubLink = getSafe(
+    () => slides[currentIndex]?.githubLink,
+    "defaultGithubLink"
   );
+
+  const currentSlide = slides[currentIndex];
+  const isVideo = currentSlide?.url?.endsWith(".mp4");
 
   return (
     <div style={sliderStyles}>
@@ -105,9 +109,23 @@ const ImageSlider = ({ slides }) => {
         ⇨{" "}
       </div>
       <div style={slideStyles}>
-        {gitlabLink && (
+      {isVideo ? (
+          <video width="500" height="800" style={{borderRadius: "10px"}}>
+            <source src={currentSlide.url} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        ) : (
+          <Image
+            src={currentSlide.url}
+            alt={currentSlide.title}
+            width="500"
+            height="500"
+            style={{ borderRadius: "10px" }}
+          />
+        )}
+        {githubLink && (
           <a
-            href={gitlabLink}
+            href={githubLink}
             target="_blank"
             rel="noopener noreferrer"
             style={{
@@ -118,7 +136,7 @@ const ImageSlider = ({ slides }) => {
             }}
           >
             <div className="neon-outline">
-              {FaGitlab && <FaGitlab size={40} color="#fff" />}
+              {FaGithub && <FaGithub size={40} color="#fff" />}
             </div>
           </a>
         )}

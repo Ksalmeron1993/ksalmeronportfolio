@@ -28,11 +28,7 @@ a {
   right: 10;
   width: 100%;
   z-index: 10; /* Ensures the navbar stays on top */
-  background-color: rgb(
-    37,
-    70,
-    116
-  );
+  background-color: rgb(37, 70, 116);
   box-shadow: 0 2px 4px rgba(121, 115, 115, 0.1);
   height: 90px;
   width: 100%;
@@ -108,17 +104,6 @@ a {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-
-/*skills boxes */
-.your-section-class:hover {
-  padding: 10px;
-  margin: 5px;
-  border-radius: 15px;
-  height: 420px;
-  background-color: rgb(76, 46, 10);
-  transition: background-color 0.3s ease;
 }
 
 /*floating logo */
@@ -203,7 +188,7 @@ a {
   }
 }
 
-/*gitlab logo with green outline */
+/*github logo with green outline */
 .neon-outline {
   position: relative;
   display: inline-block;
@@ -309,4 +294,31 @@ footer {
   padding: 0vh;
   background-color: black;
   color: white;
+}
+
+.skill-icon {
+  position: relative;
+  display: inline-block;
+  
+}
+.skill-icon:hover {
+  color: rgb(0, 255, 8);
+}
+
+.skill-icon img {
+  display: none;
+  position: absolute;
+  top: 100%; /* Position the image below the icon */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: auto;
+  max-width: none; /* Override any max-width constraints */
+  max-height: none; /* Override any max-height constraints */
+  margin-top: 10px;
+  z-index: 10; /* Ensure the image appears above other content */
+}
+
+.skill-icon:hover img {
+  display: block;
 }

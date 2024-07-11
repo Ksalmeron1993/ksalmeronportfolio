@@ -51,20 +51,20 @@ function Navbar() {
           </li>
           <li className="mr-6">
             <a
-              href="#skills"
-              className="link"
-              onClick={(e) => handleLinkClick(e, "skills")}
-            >
-              Skills
-            </a>
-          </li>
-          <li className="mr-6">
-            <a
               href="#projects"
               className="link"
               onClick={(e) => handleLinkClick(e, "projects")}
             >
               Projects
+            </a>
+          </li>
+          <li className="mr-6">
+            <a
+              href="#skills"
+              className="link"
+              onClick={(e) => handleLinkClick(e, "skills")}
+            >
+              Skills
             </a>
           </li>
           <li className="mr-6">

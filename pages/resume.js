@@ -8,7 +8,7 @@ function resumeLink() {
     <div className="button-container">
       <Link
         href="/"
-        className="home-link bg-gradient-to-r from-blue-400 to to-blue-800 text-white px-4 py-2 rounded-m ml-7"
+        className="home-link bg-gradient-to-r from-blue-400 to to-blue-600 text-white px-4 py-2 rounded-m ml-7"
       >
         Home
       </Link>
