@@ -10,7 +10,7 @@ function getSafe(fn, defaultVal) {
   }
 }
 
-const ImageSlider = ({ slides }) => {
+const ImageSlider = ({ slides = [] }) => {
   if (!slides || slides.length === 0) {
     console.error("Slides is undefined or null");
   }
@@ -95,8 +95,8 @@ const ImageSlider = ({ slides }) => {
     "defaultGithubLink"
   );
 
-  const currentSlide = slides[currentIndex];
-  //const isVideo = currentSlide?.url?.endsWith(".mp4");
+  const currentSlide = slides?.[currentIndex];
+  const isVideo = currentSlide?.url?.endsWith(".mp4");
 
   return (
     <div style={sliderStyles}>
@@ -110,14 +110,13 @@ const ImageSlider = ({ slides }) => {
       </div>
       <div style={slideStyles}>
       {isVideo ? (
-          <video width="500" height="800" style={{borderRadius: "10px"}}>
-            <source src={currentSlide.url} type="video/mp4" />
-            Your browser does not support the video tag.
+          <video width="500" height="500" style={{borderRadius: "10px"}}>
+            <source src={currentSlide?.url} alt={currentSlide?.title}type="video/mp4" />
           </video>
         ) : (
           <Image
-            src={currentSlide.url}
-            alt={currentSlide.title}
+            src={currentSlide?.url}
+            alt={currentSlide?.title}
             width="500"
             height="500"
             style={{ borderRadius: "10px" }}
