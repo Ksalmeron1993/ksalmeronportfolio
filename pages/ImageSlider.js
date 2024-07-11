@@ -11,7 +11,7 @@ function getSafe(fn, defaultVal) {
 }
 
 const ImageSlider = ({ slides }) => {
-  if (!slides.length) {
+  if (!slides || slides.length === 0) {
     console.error("Slides is undefined or null");
   }
   const [currentIndex, setCurrentIndex] = useState(0);
