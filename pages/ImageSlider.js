@@ -96,7 +96,7 @@ const ImageSlider = ({ slides }) => {
   );
 
   const currentSlide = slides[currentIndex];
-  const isVideo = currentSlide?.url?.endsWith(".mp4");
+  //const isVideo = currentSlide?.url?.endsWith(".mp4");
 
   return (
     <div style={sliderStyles}>
