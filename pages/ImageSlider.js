@@ -23,21 +23,14 @@ const ImageSlider = ({ slides = [] }) => {
     margin: "0 auto",
     padding: "2px",
   };
-
-  const slideStyles = slides?.[currentIndex]
-    ? {
-        width: "100%",
-        height: "100%",
-        borderRadius: "10px",
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        backgroundImage: `url(${getSafe(() => slides[currentIndex]?.url, "")})`,
-        margin: "0 auto",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }
-    : {};
+  const slideStyles = {
+    width: "100%",
+    height: "100%",
+    borderRadius: "10px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  };
 
   const arrowStyles = {
     position: "absolute",
@@ -108,10 +101,24 @@ const ImageSlider = ({ slides = [] }) => {
         {" "}
         ⇨{" "}
       </div>
-      <div style={slideStyles}>
-      {isVideo ? (
-          <video width="500" height="500" style={{borderRadius: "10px"}}>
-            <source src={currentSlide?.url} alt={currentSlide?.title}type="video/mp4" />
+      <div
+        style={{
+          ...slideStyles,
+          backgroundImage: !isVideo && `url(${currentSlide?.url})`,
+        }}
+      >
+        {isVideo ? (
+          <video
+            width="500"
+            height="500"
+            style={{ borderRadius: "10px" }}
+            controls
+          >
+            <source
+              src={currentSlide?.url}
+              alt={currentSlide?.title}
+              type="video/mp4"
+            />
           </video>
         ) : (
           <Image
