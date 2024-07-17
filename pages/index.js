@@ -11,7 +11,7 @@ import Navbar from "./Navbar";
 import needle2 from "../public/needle2.png";
 import ScrollToTop from "react-scroll-to-top";
 import woods2 from "../public/woods2.png";
-import { Skills } from "./Skills";
+import Skills from "./Skills";
 
 export default function Home() {
   const slides = [
