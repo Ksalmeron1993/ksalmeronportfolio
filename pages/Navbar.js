@@ -40,9 +40,9 @@ function Navbar() {
           className="flex items-center space-x-8"
           style={{ fontSize: "20px" }}
         >
-          <li className="mr-4">
+          <li>
             <a
-              href="#about"
+              href="/about"
               className="link"
               onClick={(e) => handleLinkClick(e, "about")}
             >

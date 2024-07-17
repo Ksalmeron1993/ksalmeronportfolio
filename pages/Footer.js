@@ -57,7 +57,7 @@ function Footer() {
           </div>
           <div className="mt-2 text-lg font-semibold">
             <p className="md:text-xl">Portfolio by Kevin Salmeron</p>
-            <p className="md:text-xl">2023</p>
+            <p className="md:text-xl">2024</p>
           </div>
         </div>
       </div>

@@ -1,7 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import { AiFillLinkedin } from "react-icons/ai";
+import { FaGithub } from "react-icons/fa";
 import memoj2 from "../public/memoj2.png";
+
 
 function AboutMe() {
   return (
@@ -34,8 +36,15 @@ function AboutMe() {
           >
             <AiFillLinkedin />
           </a>
+          <a
+          href="https://github.com/Ksalmeron1993"
+          target="_blank"
+          rel="noopener noreferrer"
+          >
+            <FaGithub />
+          </a>
         </div>
-        <div className="relative mx-auto bg-gradient-to-r from-green-400 to-green-900 rounded-full w-32 h-32 md:h-64 md:w-64 mt-3 overflow-hidden container reveal fade-left">
+        <div className="relative mx-auto bg-gradient-to-r from-green-400 to-green-900 rounded-full w-30 h-30 md:h-60 md:w-60 mt-1 overflow-hidden container reveal fade-left">
           <Image
             src={memoj2}
             alt="A developer coding on a computer"

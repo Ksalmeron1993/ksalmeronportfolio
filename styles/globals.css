@@ -36,7 +36,7 @@ a {
 /* Styles for screens wider than 900px */
 @media (min-width: 900px) {
   .container {
-    padding: 30px;
+    padding: 0px;
   }
 }
 
