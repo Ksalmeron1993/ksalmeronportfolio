@@ -160,13 +160,13 @@ export default function Home() {
           <div className="mb-10">
             <AboutMe />
           </div>
-          <section className="flex flex-col items-center mb-10 bg-black text-white w-full m-0 mt-4">
+          <section className="flex flex-col items-center mb-10 bg-black text-white w-full m-0 mt-18">
             <div
               id="projects"
               name="projects"
               className="text-5xl flex justify-center py-9 text-white-600 container reveal fade-right"
             >
-              <p className="alfa-slab-one text-6xl md:text-7xl">Projects</p>
+              <p className="alfa-slab-one text-6xl md:text-7xl mt-8">Projects</p>
             </div>
             <div className="w-full mt-12 mb-10 text-center">
               <ImageSlider slides={slides} />
@@ -186,7 +186,7 @@ export default function Home() {
             <ScrollToTop smooth />
           </div>
 
-          <div className="container mb-10" id="contact" name="contact">
+          <div className="container mb-10 mt-10" id="contact" name="contact">
             <Footer />
           </div>
         </main>

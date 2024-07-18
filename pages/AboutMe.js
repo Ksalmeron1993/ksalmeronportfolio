@@ -13,7 +13,7 @@ function AboutMe() {
           style={{ fontWeight: "bold", color: "white" }}
           id="about"
           name="about"
-          className="text-xl py-2 font-medium md:text-5xl"
+          className="text-xl py-2 font-medium md:text-5xl mt-8"
         >
           Front End
           <br /> Software Developer.
@@ -28,7 +28,7 @@ function AboutMe() {
             Please leave any feedback or reach out if you want to connect with me ! 
             </p>
         </div>
-        <div className="text-5xl flex justify-center gap-16 py-3 text-white-600 container reveal fade-right">
+        <div className="text-5xl flex justify-center gap-16 top-8 py-3 text-white-600 container reveal fade-right">
           <a
             href="https://www.linkedin.com/in/kevin-salmeron-zendejas"
             target="_blank"
@@ -44,7 +44,7 @@ function AboutMe() {
             <FaGithub />
           </a>
         </div>
-        <div className="relative mx-auto bg-gradient-to-r from-green-400 to-green-900 rounded-full w-30 h-30 md:h-60 md:w-60 mt-1 overflow-hidden container reveal fade-left">
+        <div className="relative mx-auto bg-gradient-to-r from-green-400 to-green-900 rounded-full w-30 h-30 md:h-60 md:w-60 mt-20 overflow-hidden container reveal fade-left">
           <Image
             src={memoj2}
             alt="A developer coding on a computer"

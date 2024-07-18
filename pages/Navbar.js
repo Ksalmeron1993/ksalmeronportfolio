@@ -21,11 +21,11 @@ function Navbar() {
 
   return (
     <nav
-      className="sticky-navbar py-10 mb-12 flex justify-between"
+      className="sticky-navbar py-10 mb-10 flex justify-between"
       style={{ fontSize: "20px" }}
     >
       <div className="image-container">
-        <Image src={logomain} alt="logokevin" width={130} height={130} />
+        <Image src={logomain} alt="logokevin" width={130} height={130} priority />
       </div>
       <ul className=" flex items-center space-x-8">
         <li>

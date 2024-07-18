@@ -35,7 +35,7 @@ const ImageSlider = ({ slides = [] }) => {
   const arrowStyles = {
     position: "absolute",
     top: "50%",
-    fontSize: "25px",
+    fontSize: "50px",
     color: "#fff",
     zIndex: 1,
     cursor: "pointer",
@@ -95,16 +95,16 @@ const ImageSlider = ({ slides = [] }) => {
     <div style={sliderStyles}>
       <div style={leftArrowStyles} onClick={goToPrevious}>
         {" "}
-        ⇦{" "}
+        ◅ {" "}
       </div>
       <div style={rightArrowStyles} onClick={goToNext}>
         {" "}
-        ⇨{" "}
+        ▻{" "}
       </div>
       <div
         style={{
           ...slideStyles,
-          backgroundImage: !isVideo && `url(${currentSlide?.url})`,
+          ...(currentSlide && !isVideo && currentSlide.url ? { backgroundImage: `url(${currentSlide.url})` } : {}),
         }}
       >
         {isVideo ? (
@@ -136,7 +136,7 @@ const ImageSlider = ({ slides = [] }) => {
             rel="noopener noreferrer"
             style={{
               position: "absolute",
-              bottom: "520px",
+              bottom: "10px",
               left: "50%",
               transform: "translateX(-50%)",
             }}

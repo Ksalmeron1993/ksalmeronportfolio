@@ -17,7 +17,7 @@ import code_django from "../public/code_django.png";
 function Skills() {
   return (
     <div className="text-center">
-      <p className="alfa-slab-one mb-10" style={{ fontSize: "90px" }}>
+      <p className="alfa-slab-one mb-10 mt-8" style={{ fontSize: "90px" }}>
         Skills
       </p>
       <div className="flex justify-center items-center space-x-8">
