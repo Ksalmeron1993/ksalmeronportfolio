@@ -166,7 +166,7 @@ a {
   opacity: 1;
 }
 .active.fade-bottom {
-  animation: fade-bottom 0.75s ease-in;
+  animation: fade-bottom 0.7d5s ease-in;
 }
 .active.fade-left {
   animation: fade-left 0.75s ease-in;

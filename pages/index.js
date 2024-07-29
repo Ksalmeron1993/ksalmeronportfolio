@@ -30,7 +30,7 @@ export default function Home() {
       title: "MovieMania",
       githubLink: "https://github.com/Ksalmeron1993/MovieMania.git",
     },
-    { url: "/morecoming.png", title: "Default", githubLink: null },
+   
   ];
 
   const containerStyles = {
